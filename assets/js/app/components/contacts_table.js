@@ -4,7 +4,7 @@ $(document).ready(function(){
       return (
         <div className="container">
           <div className="row">
-            <p>
+            <p className="text-right">
               <a href="#" className="btn btn-success">Create Contact</a>
             </p>
             <p>
