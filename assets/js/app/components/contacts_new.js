@@ -27,10 +27,32 @@ $(document).ready(function(){
               <Modal.Title>Create new contact</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <h4>CREATE NEW CONTACT</h4>
+              <form>
+                <div className="form-group">
+                  <label htmlFor="type">Type of contact:</label>
+                  <input type="text" className="form-control"
+                        id="type" placeholder="email/phone/vk/fb/etc..." value={this.state.type} />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="name">Name of contact:</label>
+                  <input type="text" className="form-control"
+                         id="name" placeholder="e.g. email" value={this.state.name} />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="value">Value of contact:</label>
+                  <input type="value" className="form-control"
+                         id="value" placeholder="e.g. admin@email.com" value={this.state.value} />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="title">Title for public:</label>
+                  <input type="title" className="form-control"
+                         id="title" placeholder="e.g. Admin" value={this.state.title} />
+                </div>
+              </form>
             </Modal.Body>
             <Modal.Footer>
               <Button onClick={this.close} bsStyle="primary">Save</Button>
+              <Button onClick={this.close} bsStyle="default">Cancel</Button>
             </Modal.Footer>
           </Modal>
         </div>
