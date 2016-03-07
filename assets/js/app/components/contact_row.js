@@ -9,10 +9,7 @@ $(document).ready(function(){
           <td>{this.props.contact.get("value")}</td>
           <td>{this.props.contact.get("title")}</td>
           <td>
-            <button
-              className="btn btn-warning"
-              data-id={this.props.contact.get("id")}
-              onClick={this.props.editAction}>Edit</button>
+            <window.ContactsEdit />
           </td>
           <td>
             <button
