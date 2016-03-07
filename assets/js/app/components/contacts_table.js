@@ -1,5 +1,22 @@
 $(document).ready(function(){
   window.ContactsTable = React.createClass({
+    getDefaultProps: function(){
+      return {
+        contacts: []
+      };
+    },
+
+    /**
+     * Get rows of contacts table.
+     8 @return Array - array of rows.
+     */
+    row: function() {
+      var rows = [];
+      this.props.contacts.forEach(function(c){
+        rows.push(<window.ContactRow contact={c} />);
+      });
+      return rows;
+    },
     render: function() {
       return (
         <div className="container">
@@ -19,6 +36,7 @@ $(document).ready(function(){
                     <th />
                   </tr>
                 </thead>
+                <tbody>{this.row()}</tbody>
               </table>
             </p>
           </div>

@@ -1,5 +1,5 @@
 $(document).ready({
-  var ContactRow = React.createClass({
+  window.ContactRow = React.createClass({
     render: function(){
       return(
         <tr>
