@@ -34,21 +34,10 @@ $(document).ready(function() {
     }
   });
 
-  var HelloWorld = React.createClass({
-    render: function() {
-      return (
-        <p>
-          Hello, <input type="text" placeholder="Your name here" />!
-          It is {this.props.date.toTimeString()}
-        </p>
-      );
-    }
-  });
-
   console.log(profile);
 
   ReactDOM.render(
-    <CardComponent profile={profile} />,
+    <window.ContactsTable />,
     document.getElementById("app")
   );
 });
