@@ -11,12 +11,14 @@ $(document).ready(function(){
           <td>
             <button
               className="btn btn-warning"
-              data-id={this.props.contact.get("id")}>Show</button>
+              data-id={this.props.contact.get("id")}
+              onClick={this.props.editAction}>Edit</button>
           </td>
           <td>
             <button
               className="btn btn-danger"
-              data-id={this.props.contact.get("id")}>Delete</button>
+              data-id={this.props.contact.get("id")}
+              onClick={this.props.deleteAction}>Delete</button>
           </td>
         </tr>
       );

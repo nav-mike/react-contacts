@@ -13,14 +13,29 @@ $(document).ready(function(){
      */
     renderRows: function() {
       var rows = [];
+      var self = this;
       this.props.contacts.forEach(function(c){
-        rows.push(<window.ContactRow contact={c} key={c.get("id")} />);
+        rows.push(
+          <window.ContactRow
+            contact={c}
+            editAction={self.editContact}
+            deleteAction={self.deleteContact}
+            key={c.get("id")} />
+        );
       });
       return rows;
     },
 
     createContact: function(event){
       console.log('render contact form ui');
+    },
+
+    editContact: function(event){
+      console.log('render edit contact ui');
+    },
+
+    deleteContact: function(event){
+      console.log('delete contact');
     },
 
     render: function() {
