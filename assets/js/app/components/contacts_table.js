@@ -43,9 +43,9 @@ $(document).ready(function(){
       return (
         <div className="container">
           <div className="row">
-            <p className="text-right">
-              <button className="btn btn-success" onClick={this.createContact}>Create Contact</button>
-            </p>
+            <div className="text-right bottom-space-10">
+              <window.ContactsNew />
+            </div>
             <table className="table table-bordered table-stripped table-hover">
               <thead>
                 <tr>
