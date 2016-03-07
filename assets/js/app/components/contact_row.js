@@ -1,4 +1,5 @@
-$(document).ready({
+$(document).ready(function(){
+  console.log('start contact row define');
   window.ContactRow = React.createClass({
     render: function(){
       return(
