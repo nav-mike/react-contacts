@@ -14,7 +14,13 @@ $(document).ready(function(){
     },
 
     close: function(){
-      this.setState({showModal: false});
+      this.setState({
+        showModal: false,
+        type: '',
+        name: '',
+        value: '',
+        title: ''
+      });
     },
 
     open: function() {
@@ -30,7 +36,13 @@ $(document).ready(function(){
       };
       var c = new window.Contact(contact);
       this.props.parent.addContact(c);
-      this.setState({showModal: false});
+      this.setState({
+        showModal: false,
+        type: '',
+        name: '',
+        value: '',
+        title: ''
+      });
     },
     
     typeChange: function(event) {
