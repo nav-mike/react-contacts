@@ -28,7 +28,9 @@ $(document).ready(function(){
         title: this.state.title,
         value:  this.state.value
       };
-      console.log(contact);
+      var c = new window.Contact(contact);
+      this.props.parent.contactsCollection().add(c);
+      console.log(this.props.parent.contactsCollection());
     },
     
     typeChange: function(event) {

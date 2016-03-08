@@ -9,7 +9,7 @@ $(document).ready(function(){
           <td>{this.props.contact.get("value")}</td>
           <td>{this.props.contact.get("title")}</td>
           <td>
-            <window.ContactsEdit />
+            <window.ContactsEdit parent={this.props.parent} />
           </td>
           <td>
             <button

@@ -20,10 +20,15 @@ $(document).ready(function(){
             contact={c}
             editAction={self.editContact}
             deleteAction={self.deleteContact}
-            key={c.get("id")} />
+            key={c.get("id")}
+            parent={this} />
         );
       });
       return rows;
+    },
+    
+    contactsCollection: function(){
+      return this.props.contacts;
     },
 
     createContact: function(event){
@@ -44,7 +49,7 @@ $(document).ready(function(){
         <div className="container">
           <div className="row">
             <div className="text-right bottom-space-10">
-              <window.ContactsNew />
+              <window.ContactsNew parent={this} />
             </div>
             <table className="table table-bordered table-stripped table-hover">
               <thead>
