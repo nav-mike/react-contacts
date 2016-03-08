@@ -34,6 +34,13 @@ $(document).ready(function(){
         title: this.state.title,
         value:  this.state.value
       };
+      if (
+        contact.type == '' &&
+        contact.name == '' &&
+        contact.title == '' &&
+        contact.value == ''
+        )
+        return;
       var c = new window.Contact(contact);
       this.props.parent.addContact(c);
       this.setState({
