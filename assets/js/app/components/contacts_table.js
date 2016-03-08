@@ -1,6 +1,10 @@
 $(document).ready(function(){
   console.log('start define contacts table');
   window.ContactsTable = React.createClass({
+    getInitialState: function(){
+      return {contacts: this.props.contacts}
+    },
+    
     getDefaultProps: function(){
       return {
         contacts: []
@@ -27,8 +31,11 @@ $(document).ready(function(){
       return rows;
     },
     
-    contactsCollection: function(){
-      return this.props.contacts;
+    addContact: function(contact){
+      var contacts = this.state.contacts;
+      contact.set("id", contacts.length + 1);
+      contacts.add(contact);
+      this.setState({contacts: contacts});
     },
 
     createContact: function(event){
