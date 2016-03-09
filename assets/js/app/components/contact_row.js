@@ -12,10 +12,7 @@ $(document).ready(function(){
             <window.ContactsEdit parent={this.props.parent} />
           </td>
           <td>
-            <button
-              className="btn btn-danger"
-              data-id={this.props.contact.get("id")}
-              onClick={this.props.deleteAction}>Delete</button>
+            <window.ContactsDelete parent={this.props.parent} />
           </td>
         </tr>
       );
